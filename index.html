@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sriya &amp; Arjun · శుభ వివాహం</title>
+
+  <!-- Telugu + English fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Tiro+Telugu&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Our CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navigation -->
+  <nav id="nav">
+    <b>S &amp; A</b>
+
+    <button
+      id="bg"
+      aria-label="Menu"
+      onclick="nav.classList.toggle('open')"
+    >☰</button>
+
+    <a href="#home">Home</a>
+    <a href="#story">Our Story</a>
+    <a href="#events">Events</a>
+    <a href="#venue">Venue</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+
+  <!-- JavaScript puts all wedding sections inside this element -->
+  <main id="app"></main>
+
+  <!-- Optional wedding music player -->
+  <button id="mus" hidden>♪ Wedding Music</button>
+  <audio id="au" loop></audio>
+
+  <!-- Admin panel is generated here by JavaScript -->
+  <div id="adm"></div>
+
+  <!-- Our JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
