@@ -4,13 +4,13 @@
 // Put your own images inside: assets/images/
 // You can replace the image files and keep these same filenames.
 const IMG = {
-  pellikuthuru: 'assets/images/pellikuthuru.jpg',
-  mehendi: 'assets/images/mehendi.jpg',
-  haldi: 'assets/images/haldi.png',
+  pellikuthuru: 'pellikuthuru.jpg',
+  mehendi: 'mehendi.jpg',
+  haldi: 'haldi.png',
   // snanam: 'assets/images/snanam.jpg',
-  muhurtam: 'assets/images/marriage.png',
-  sangeeth: 'assets/images/sangeeth.png',
-  reception: 'assets/images/reception.jpg'
+  muhurtam: 'marriage.png',
+  sangeeth: 'sangeeth.png',
+  reception: 'reception.jpg'
 };
 
 // ============================================================
@@ -65,12 +65,12 @@ bride:'Sriya',groom:'Arjun',date:'2026-12-20',time:'10:35',muh:'10:35 AM',venue:
 story:'Two beautiful souls, brought together by destiny, are beginning a new chapter filled with love, laughter and togetherness.',
 brideFam:'Sri. [Father\'s name] & Smt. [Mother\'s name]\nand family',groomFam:'Sri. [Father\'s name] & Smt. [Mother\'s name]\nand family',
 music:'',musicOn:true,pass:'admin123',rsvps:[],gallery:[
-  {src:'assets/images/marriage-1.png',cat:'జీలకర్ర బెల్లం'},
-  {src:'assets/images/marriage-4.png',cat:'తలంబ్రాలు '},
-  {src:'assets/images/marriage-2.png',cat:'కన్యాదానం '},
-  {src:'assets/images/marriage-5.png',cat:'దండలు మార్చుకోవడం'},
-  {src:'assets/images/marriage-3.png',cat:'మాంగళ్య ధారణ'},
-  {src:'assets/images/marriage-6.png',cat:'సప్తపది '}
+  {src:'marriage-1.png',cat:'జీలకర్ర బెల్లం'},
+  {src:'marriage-4.png',cat:'తలంబ్రాలు '},
+  {src:'marriage-2.png',cat:'కన్యాదానం '},
+  {src:'marriage-5.png',cat:'దండలు మార్చుకోవడం'},
+  {src:'marriage-3.png',cat:'మాంగళ్య ధారణ'},
+  {src:'marriage-6.png',cat:'సప్తపది '}
 ],
 events:[
 ev('Haldi','నలుగు / పసుపు కార్యక్రమం','2026-12-15','10:00',V,A,'Turmeric is applied with songs and laughter, in the presence of family.','@haldi'),
@@ -112,7 +112,7 @@ $('app').innerHTML=`
 <section id="story"><div class="wrap">${hd('రెండు మనసులు...<br>ఒక అందమైన ప్రయాణం','Two Hearts, One Beautiful Beginning')}<p class="s">${e(D.story)}</p><p class="te">సకల శుభములు కలుగుగాక</p></div></section>
 <section id="events"><div class="wrap">${hd('వివాహ వేడుకలు','Wedding Celebrations')}<div class="tl">${evs}</div></div></section>
 <section id="count"><div class="wrap">${hd('శుభ ఘడియ కోసం ఎదురుచూస్తూ...','Counting the moments...')}<div class="cd"><div><b id="c0">0</b><span>DAYS</span></div><div><b id="c1">0</b><span>HOURS</span></div><div><b id="c2">0</b><span>MINUTES</span></div><div><b id="c3">0</b><span>SECONDS</span></div></div></div></section>
-<section id="venue"><div class="wrap"><div class="venue-image"><img src="assets/images/venue.jpg" alt="Wedding Venue"></div><div>${hd('వేదిక','Wedding Venue')}<h3>${e(D.venue)}</h3><p>${e(D.addr)}</p><p class="meta">${dt(D.date,{day:'numeric',month:'long',year:'numeric'})}<br>ముహూర్తం: ${e(D.muh)}</p><a class="btn" href="${e(D.map)}" target="_blank" rel="noopener">Open in Google Maps</a></div></div></section>
+<section id="venue"><div class="wrap"><div class="venue-image"><img src="venue.jpg" alt="Wedding Venue"></div><div>${hd('వేదిక','Wedding Venue')}<h3>${e(D.venue)}</h3><p>${e(D.addr)}</p><p class="meta">${dt(D.date,{day:'numeric',month:'long',year:'numeric'})}<br>ముహూర్తం: ${e(D.muh)}</p><a class="btn" href="${e(D.map)}" target="_blank" rel="noopener">Open in Google Maps</a></div></div></section>
 <section id="bless"><div class="wrap">${LOT.replace(/#a8842f/g,'#f3d58c')}<p class="q">With the blessings of our elders,<br>we warmly invite you to celebrate<br>the wedding of Sriya & Arjun.</p><p class="te">మీ రాకతో మా వివాహ వేడుకకు<br>మరింత శోభ చేకూరాలని కోరుకుంటూ.<br>సాదరంగా ఆహ్వానిస్తున్నాము...</p></div></section>
 <section id="gallery"><div class="wrap">${hd('చిత్రమాలిక','Gallery')}${pics.length?`<div class="gal">${pics.map(g=>`<figure><img src="${e(g.src)}" alt="${e(g.cat)}"><figcaption>${e(g.cat)}</figcaption></figure>`).join('')}</div>`:'<p class="empty">Photos will appear here soon.</p>'}</div></section><section id="rsvp"><div class="wrap">${hd('మీ రాకే మా ఆశీర్వాదం','Your presence is our blessing')}<form class="rs" onsubmit="return rsvp(this)"><label>Name<input name="n" required></label><label>Number of Guests<input name="g" type="number" min="1" max="20" value="1" required></label><label>Will you attend?<select name="a"><option>Yes</option><option>No</option><option>Maybe</option></select></label><label>Message<textarea name="m"></textarea></label><button class="btn">Send RSVP</button></form></div></section>
 <footer><p class="te" style="color:#f3d58c">శుభమస్తు</p><p>${e(D.bride)} &amp; ${e(D.groom)}</p><a href="#admin" onclick="admin()">.</a></footer>`;
